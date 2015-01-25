@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F9BACDB11A7494D60032BAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */; };
+		F9BACDB31A7494D60032BAA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDB21A7494D60032BAA5 /* ViewController.swift */; };
+		F9BACDB51A7494D60032BAA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDB41A7494D60032BAA5 /* Images.xcassets */; };
+		F9BACDB81A7494D60032BAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDB61A7494D60032BAA5 /* Main.storyboard */; };
+		F9BACDC41A7494D60032BAA5 /* CafeteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDC31A7494D60032BAA5 /* CafeteriaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9BACDBE1A7494D60032BAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9BACDA31A7494D60032BAA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9BACDAA1A7494D60032BAA5;
+			remoteInfo = Cafeteria;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F9BACDAB1A7494D60032BAA5 /* Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafeteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BACDAF1A7494D60032BAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9BACDB21A7494D60032BAA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9BACDB41A7494D60032BAA5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F9BACDB71A7494D60032BAA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeteriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BACDC21A7494D60032BAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BACDC31A7494D60032BAA5 /* CafeteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9BACDA81A7494D60032BAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BACDBA1A7494D60032BAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F9BACDA21A7494D60032BAA5 = {
+			isa = PBXGroup;
+			children = (
+				F9BACDAD1A7494D60032BAA5 /* Cafeteria */,
+				F9BACDC01A7494D60032BAA5 /* CafeteriaTests */,
+				F9BACDAC1A7494D60032BAA5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9BACDAC1A7494D60032BAA5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDAB1A7494D60032BAA5 /* Cafeteria.app */,
+				F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9BACDAD1A7494D60032BAA5 /* Cafeteria */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */,
+				F9BACDB21A7494D60032BAA5 /* ViewController.swift */,
+				F9BACDB41A7494D60032BAA5 /* Images.xcassets */,
+				F9BACDB61A7494D60032BAA5 /* Main.storyboard */,
+				F9BACDAE1A7494D60032BAA5 /* Supporting Files */,
+			);
+			path = Cafeteria;
+			sourceTree = "<group>";
+		};
+		F9BACDAE1A7494D60032BAA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDAF1A7494D60032BAA5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F9BACDC01A7494D60032BAA5 /* CafeteriaTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDC31A7494D60032BAA5 /* CafeteriaTests.swift */,
+				F9BACDC11A7494D60032BAA5 /* Supporting Files */,
+			);
+			path = CafeteriaTests;
+			sourceTree = "<group>";
+		};
+		F9BACDC11A7494D60032BAA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDC21A7494D60032BAA5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9BACDAA1A7494D60032BAA5 /* Cafeteria */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BACDC71A7494D60032BAA5 /* Build configuration list for PBXNativeTarget "Cafeteria" */;
+			buildPhases = (
+				F9BACDA71A7494D60032BAA5 /* Sources */,
+				F9BACDA81A7494D60032BAA5 /* Frameworks */,
+				F9BACDA91A7494D60032BAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cafeteria;
+			productName = Cafeteria;
+			productReference = F9BACDAB1A7494D60032BAA5 /* Cafeteria.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9BACDBC1A7494D60032BAA5 /* CafeteriaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BACDCA1A7494D60032BAA5 /* Build configuration list for PBXNativeTarget "CafeteriaTests" */;
+			buildPhases = (
+				F9BACDB91A7494D60032BAA5 /* Sources */,
+				F9BACDBA1A7494D60032BAA5 /* Frameworks */,
+				F9BACDBB1A7494D60032BAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9BACDBF1A7494D60032BAA5 /* PBXTargetDependency */,
+			);
+			name = CafeteriaTests;
+			productName = CafeteriaTests;
+			productReference = F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9BACDA31A7494D60032BAA5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = nosebrain;
+				TargetAttributes = {
+					F9BACDAA1A7494D60032BAA5 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					F9BACDBC1A7494D60032BAA5 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = F9BACDAA1A7494D60032BAA5;
+					};
+				};
+			};
+			buildConfigurationList = F9BACDA61A7494D60032BAA5 /* Build configuration list for PBXProject "Cafeteria" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9BACDA21A7494D60032BAA5;
+			productRefGroup = F9BACDAC1A7494D60032BAA5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9BACDAA1A7494D60032BAA5 /* Cafeteria */,
+				F9BACDBC1A7494D60032BAA5 /* CafeteriaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9BACDA91A7494D60032BAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BACDB51A7494D60032BAA5 /* Images.xcassets in Resources */,
+				F9BACDB81A7494D60032BAA5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BACDBB1A7494D60032BAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9BACDA71A7494D60032BAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BACDB31A7494D60032BAA5 /* ViewController.swift in Sources */,
+				F9BACDB11A7494D60032BAA5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9BACDB91A7494D60032BAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BACDC41A7494D60032BAA5 /* CafeteriaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9BACDBF1A7494D60032BAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9BACDAA1A7494D60032BAA5 /* Cafeteria */;
+			targetProxy = F9BACDBE1A7494D60032BAA5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F9BACDB61A7494D60032BAA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9BACDB71A7494D60032BAA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F9BACDC51A7494D60032BAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9BACDC61A7494D60032BAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F9BACDC81A7494D60032BAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Cafeteria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F9BACDC91A7494D60032BAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Cafeteria/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F9BACDCB1A7494D60032BAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CafeteriaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cafeteria.app/Contents/MacOS/Cafeteria";
+			};
+			name = Debug;
+		};
+		F9BACDCC1A7494D60032BAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CafeteriaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cafeteria.app/Contents/MacOS/Cafeteria";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9BACDA61A7494D60032BAA5 /* Build configuration list for PBXProject "Cafeteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BACDC51A7494D60032BAA5 /* Debug */,
+				F9BACDC61A7494D60032BAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BACDC71A7494D60032BAA5 /* Build configuration list for PBXNativeTarget "Cafeteria" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BACDC81A7494D60032BAA5 /* Debug */,
+				F9BACDC91A7494D60032BAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F9BACDCA1A7494D60032BAA5 /* Build configuration list for PBXNativeTarget "CafeteriaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BACDCB1A7494D60032BAA5 /* Debug */,
+				F9BACDCC1A7494D60032BAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F9BACDA31A7494D60032BAA5 /* Project object */;
+}
