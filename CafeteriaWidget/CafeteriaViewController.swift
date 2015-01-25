@@ -87,7 +87,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         let components = calendar.components(.CalendarUnitWeekday, fromDate: today)
         var weekday = components.weekday
         
-        weekday-- // 0 = monday, …
+        weekday -= 2 // 0 = monday, …
         
         if (weekday < 0 || weekday > 4) {
             weekday = 0;
