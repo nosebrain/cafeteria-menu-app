@@ -65,7 +65,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         self.dayLabel.stringValue = labelText;
         
         if let cafeteria = self.representedObject as? Cafeteria {
-            let urlString = NSString(format: "http://localhost:9090/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
+            let urlString = NSString(format: "http://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
             
             println(urlString)
             
