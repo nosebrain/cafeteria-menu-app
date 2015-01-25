@@ -17,6 +17,10 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     var arrayController : NSArrayController!
     var data : NSMutableData?
     
+    var minimumVisibleRowCount: Int {
+        return 10
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,7 +34,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     
     func widgetMarginInsetsForProposedMarginInsets(defaultMarginInset: NSEdgeInsets) -> NSEdgeInsets {
         // Override the left margin so that the list view is flush with the edge.
-        return NSEdgeInsets(top: 10, left: -25, bottom: 10, right: 0);
+        return NSEdgeInsets(top: 10, left: -100, bottom: 10, right: 0);
     }
     
     func widgetList(list: NCWidgetListViewController!, viewControllerForRow row: Int) -> NSViewController! {
@@ -74,6 +78,8 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
             let connection = NSURLConnection(request: req, delegate: self, startImmediately: true)
         }
     }
+    
+
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let today = NSDate()

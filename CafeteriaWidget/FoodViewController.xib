@@ -11,21 +11,31 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="237"/>
+        <customView misplaced="YES" simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="487" height="46"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y9a-77-qiS">
-                    <rect key="frame" x="1" y="204" width="481" height="17"/>
-                    <textFieldCell key="cell" allowsUndo="NO" sendsActionOnEndEditing="YES" title="Label" id="Deg-iq-dr2">
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mzs-r0-Axo">
+                    <rect key="frame" x="-2" y="7" width="486" height="34"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="lAW-3a-hcP"/>
+                    </constraints>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="hTP-vZ-iPr">
                         <font key="font" metaFont="system"/>
+                        <string key="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</string>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                     <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.desc" id="vs8-sK-X4R"/>
+                        <binding destination="-2" name="value" keyPath="self.representedObject.desc" id="3NV-Xb-GoX"/>
                     </connections>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="248" y="364.5"/>
+            <constraints>
+                <constraint firstItem="Mzs-r0-Axo" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="1KH-eD-NUQ"/>
+                <constraint firstItem="Mzs-r0-Axo" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="1lZ-xu-RTC"/>
+                <constraint firstAttribute="trailing" secondItem="Mzs-r0-Axo" secondAttribute="trailing" constant="5" id="Acn-bK-ehn"/>
+                <constraint firstAttribute="bottom" secondItem="Mzs-r0-Axo" secondAttribute="bottom" id="k8S-Vt-25Y"/>
+            </constraints>
+            <point key="canvasLocation" x="251.5" y="269"/>
         </customView>
         <userDefaultsController representsSharedInstance="YES" id="dqy-RG-U31"/>
     </objects>
