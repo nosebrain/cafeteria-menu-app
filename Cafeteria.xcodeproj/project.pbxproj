@@ -7,11 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F955CCA31A753779005E0926 /* CafeteriaViewLabelTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCA21A753779005E0926 /* CafeteriaViewLabelTransformer.swift */; };
+		F955CCA61A753B48005E0926 /* Cafeteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDE71A7495270032BAA5 /* Cafeteria.swift */; };
+		F955CCA81A753EA7005E0926 /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCA71A753EA7005E0926 /* FoodViewController.swift */; };
+		F955CCAA1A753FF1005E0926 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCA91A753FF1005E0926 /* Food.swift */; };
+		F955CCAC1A753FF9005E0926 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCAB1A753FF9005E0926 /* Day.swift */; };
+		F955CCAD1A753FFD005E0926 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCA91A753FF1005E0926 /* Food.swift */; };
+		F955CCAE1A753FFF005E0926 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = F955CCAB1A753FF9005E0926 /* Day.swift */; };
+		F955CCB01A754097005E0926 /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F955CCAF1A754097005E0926 /* FoodViewController.xib */; };
 		F9BACDB11A7494D60032BAA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */; };
 		F9BACDB31A7494D60032BAA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDB21A7494D60032BAA5 /* ViewController.swift */; };
 		F9BACDB51A7494D60032BAA5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDB41A7494D60032BAA5 /* Images.xcassets */; };
 		F9BACDB81A7494D60032BAA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDB61A7494D60032BAA5 /* Main.storyboard */; };
 		F9BACDC41A7494D60032BAA5 /* CafeteriaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDC31A7494D60032BAA5 /* CafeteriaTests.swift */; };
+		F9BACDD41A7494EF0032BAA5 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9BACDD31A7494EF0032BAA5 /* NotificationCenter.framework */; };
+		F9BACDDB1A7494EF0032BAA5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDD91A7494EF0032BAA5 /* InfoPlist.strings */; };
+		F9BACDDD1A7494EF0032BAA5 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDDC1A7494EF0032BAA5 /* TodayViewController.swift */; };
+		F9BACDDF1A7494EF0032BAA5 /* TodayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDDE1A7494EF0032BAA5 /* TodayViewController.xib */; };
+		F9BACDE21A7494EF0032BAA5 /* CafeteriaWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F9BACDD11A7494EF0032BAA5 /* CafeteriaWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9BACDE81A7495270032BAA5 /* Cafeteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDE71A7495270032BAA5 /* Cafeteria.swift */; };
+		F9BACDEA1A74959B0032BAA5 /* CafeteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDE91A74959B0032BAA5 /* CafeteriaViewController.swift */; };
+		F9BACDEC1A7514A60032BAA5 /* CafeteriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,9 +38,35 @@
 			remoteGlobalIDString = F9BACDAA1A7494D60032BAA5;
 			remoteInfo = Cafeteria;
 		};
+		F9BACDE01A7494EF0032BAA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9BACDA31A7494D60032BAA5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9BACDD01A7494EF0032BAA5;
+			remoteInfo = CafeteriaWidget;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F9BACDE61A7494F00032BAA5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F9BACDE21A7494EF0032BAA5 /* CafeteriaWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F955CCA21A753779005E0926 /* CafeteriaViewLabelTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriaViewLabelTransformer.swift; sourceTree = "<group>"; };
+		F955CCA71A753EA7005E0926 /* FoodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		F955CCA91A753FF1005E0926 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		F955CCAB1A753FF9005E0926 /* Day.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		F955CCAF1A754097005E0926 /* FoodViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
 		F9BACDAB1A7494D60032BAA5 /* Cafeteria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cafeteria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BACDAF1A7494D60032BAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +76,16 @@
 		F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CafeteriaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9BACDC21A7494D60032BAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9BACDC31A7494D60032BAA5 /* CafeteriaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CafeteriaTests.swift; sourceTree = "<group>"; };
+		F9BACDD11A7494EF0032BAA5 /* CafeteriaWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = CafeteriaWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9BACDD31A7494EF0032BAA5 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		F9BACDD71A7494EF0032BAA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9BACDD81A7494EF0032BAA5 /* CafeteriaWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CafeteriaWidget.entitlements; sourceTree = "<group>"; };
+		F9BACDDA1A7494EF0032BAA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F9BACDDC1A7494EF0032BAA5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		F9BACDDE1A7494EF0032BAA5 /* TodayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TodayViewController.xib; sourceTree = "<group>"; };
+		F9BACDE71A7495270032BAA5 /* Cafeteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafeteria.swift; sourceTree = "<group>"; };
+		F9BACDE91A74959B0032BAA5 /* CafeteriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriaViewController.swift; sourceTree = "<group>"; };
+		F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeteriaViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,14 +103,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9BACDCE1A7494EF0032BAA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BACDD41A7494EF0032BAA5 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F955CCA41A753B30005E0926 /* Transformer */ = {
+			isa = PBXGroup;
+			children = (
+				F955CCA21A753779005E0926 /* CafeteriaViewLabelTransformer.swift */,
+			);
+			name = Transformer;
+			sourceTree = "<group>";
+		};
+		F955CCA51A753B3F005E0926 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDE71A7495270032BAA5 /* Cafeteria.swift */,
+				F955CCA91A753FF1005E0926 /* Food.swift */,
+				F955CCAB1A753FF9005E0926 /* Day.swift */,
+			);
+			name = Model;
+			path = CafeteriaWidget;
+			sourceTree = SOURCE_ROOT;
+		};
 		F9BACDA21A7494D60032BAA5 = {
 			isa = PBXGroup;
 			children = (
-				F9BACDAD1A7494D60032BAA5 /* Cafeteria */,
+				F955CCA51A753B3F005E0926 /* Model */,
+				F9BACDAD1A7494D60032BAA5 /* CafeteriaOSX */,
 				F9BACDC01A7494D60032BAA5 /* CafeteriaTests */,
+				F9BACDD51A7494EF0032BAA5 /* CafeteriaWidget */,
+				F9BACDD21A7494EF0032BAA5 /* Frameworks */,
 				F9BACDAC1A7494D60032BAA5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,11 +150,12 @@
 			children = (
 				F9BACDAB1A7494D60032BAA5 /* Cafeteria.app */,
 				F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */,
+				F9BACDD11A7494EF0032BAA5 /* CafeteriaWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F9BACDAD1A7494D60032BAA5 /* Cafeteria */ = {
+		F9BACDAD1A7494D60032BAA5 /* CafeteriaOSX */ = {
 			isa = PBXGroup;
 			children = (
 				F9BACDB01A7494D60032BAA5 /* AppDelegate.swift */,
@@ -81,6 +164,7 @@
 				F9BACDB61A7494D60032BAA5 /* Main.storyboard */,
 				F9BACDAE1A7494D60032BAA5 /* Supporting Files */,
 			);
+			name = CafeteriaOSX;
 			path = Cafeteria;
 			sourceTree = "<group>";
 		};
@@ -109,6 +193,39 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F9BACDD21A7494EF0032BAA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDD31A7494EF0032BAA5 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9BACDD51A7494EF0032BAA5 /* CafeteriaWidget */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDE91A74959B0032BAA5 /* CafeteriaViewController.swift */,
+				F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */,
+				F955CCA71A753EA7005E0926 /* FoodViewController.swift */,
+				F955CCAF1A754097005E0926 /* FoodViewController.xib */,
+				F9BACDD61A7494EF0032BAA5 /* Supporting Files */,
+				F9BACDDC1A7494EF0032BAA5 /* TodayViewController.swift */,
+				F9BACDDE1A7494EF0032BAA5 /* TodayViewController.xib */,
+				F955CCA41A753B30005E0926 /* Transformer */,
+			);
+			path = CafeteriaWidget;
+			sourceTree = "<group>";
+		};
+		F9BACDD61A7494EF0032BAA5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9BACDD71A7494EF0032BAA5 /* Info.plist */,
+				F9BACDD81A7494EF0032BAA5 /* CafeteriaWidget.entitlements */,
+				F9BACDD91A7494EF0032BAA5 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,10 +236,12 @@
 				F9BACDA71A7494D60032BAA5 /* Sources */,
 				F9BACDA81A7494D60032BAA5 /* Frameworks */,
 				F9BACDA91A7494D60032BAA5 /* Resources */,
+				F9BACDE61A7494F00032BAA5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F9BACDE11A7494EF0032BAA5 /* PBXTargetDependency */,
 			);
 			name = Cafeteria;
 			productName = Cafeteria;
@@ -147,6 +266,23 @@
 			productReference = F9BACDBD1A7494D60032BAA5 /* CafeteriaTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		F9BACDD01A7494EF0032BAA5 /* CafeteriaWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9BACDE31A7494F00032BAA5 /* Build configuration list for PBXNativeTarget "CafeteriaWidget" */;
+			buildPhases = (
+				F9BACDCD1A7494EF0032BAA5 /* Sources */,
+				F9BACDCE1A7494EF0032BAA5 /* Frameworks */,
+				F9BACDCF1A7494EF0032BAA5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CafeteriaWidget;
+			productName = CafeteriaWidget;
+			productReference = F9BACDD11A7494EF0032BAA5 /* CafeteriaWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,6 +298,9 @@
 					F9BACDBC1A7494D60032BAA5 = {
 						CreatedOnToolsVersion = 6.1.1;
 						TestTargetID = F9BACDAA1A7494D60032BAA5;
+					};
+					F9BACDD01A7494EF0032BAA5 = {
+						CreatedOnToolsVersion = 6.1.1;
 					};
 				};
 			};
@@ -180,6 +319,7 @@
 			targets = (
 				F9BACDAA1A7494D60032BAA5 /* Cafeteria */,
 				F9BACDBC1A7494D60032BAA5 /* CafeteriaTests */,
+				F9BACDD01A7494EF0032BAA5 /* CafeteriaWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -201,6 +341,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9BACDCF1A7494EF0032BAA5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9BACDEC1A7514A60032BAA5 /* CafeteriaViewController.xib in Resources */,
+				F9BACDDF1A7494EF0032BAA5 /* TodayViewController.xib in Resources */,
+				F955CCB01A754097005E0926 /* FoodViewController.xib in Resources */,
+				F9BACDDB1A7494EF0032BAA5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -209,6 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9BACDB31A7494D60032BAA5 /* ViewController.swift in Sources */,
+				F955CCAA1A753FF1005E0926 /* Food.swift in Sources */,
+				F955CCA61A753B48005E0926 /* Cafeteria.swift in Sources */,
+				F955CCAC1A753FF9005E0926 /* Day.swift in Sources */,
 				F9BACDB11A7494D60032BAA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,6 +375,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F9BACDCD1A7494EF0032BAA5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F955CCAE1A753FFF005E0926 /* Day.swift in Sources */,
+				F955CCA31A753779005E0926 /* CafeteriaViewLabelTransformer.swift in Sources */,
+				F955CCA81A753EA7005E0926 /* FoodViewController.swift in Sources */,
+				F9BACDEA1A74959B0032BAA5 /* CafeteriaViewController.swift in Sources */,
+				F9BACDE81A7495270032BAA5 /* Cafeteria.swift in Sources */,
+				F9BACDDD1A7494EF0032BAA5 /* TodayViewController.swift in Sources */,
+				F955CCAD1A753FFD005E0926 /* Food.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -228,6 +396,11 @@
 			isa = PBXTargetDependency;
 			target = F9BACDAA1A7494D60032BAA5 /* Cafeteria */;
 			targetProxy = F9BACDBE1A7494D60032BAA5 /* PBXContainerItemProxy */;
+		};
+		F9BACDE11A7494EF0032BAA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9BACDD01A7494EF0032BAA5 /* CafeteriaWidget */;
+			targetProxy = F9BACDE01A7494EF0032BAA5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -238,6 +411,14 @@
 				F9BACDB71A7494D60032BAA5 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F9BACDD91A7494EF0032BAA5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F9BACDDA1A7494EF0032BAA5 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -325,6 +506,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Cafeteria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -336,6 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Cafeteria/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -378,6 +561,36 @@
 			};
 			name = Release;
 		};
+		F9BACDE41A7494F00032BAA5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CafeteriaWidget/CafeteriaWidget.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CafeteriaWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9BACDE51A7494F00032BAA5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = CafeteriaWidget/CafeteriaWidget.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = CafeteriaWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -397,6 +610,7 @@
 				F9BACDC91A7494D60032BAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9BACDCA1A7494D60032BAA5 /* Build configuration list for PBXNativeTarget "CafeteriaTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +619,16 @@
 				F9BACDCC1A7494D60032BAA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9BACDE31A7494F00032BAA5 /* Build configuration list for PBXNativeTarget "CafeteriaWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9BACDE41A7494F00032BAA5 /* Debug */,
+				F9BACDE51A7494F00032BAA5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CafeteriaViewController" customModule="CafeteriaWidget" customModuleProvider="target">
+            <connections>
+                <outlet property="dayLabel" destination="2a8-YQ-ztw" id="be3-ph-Cq0"/>
+                <outlet property="listViewController" destination="cL0-M4-Suo" id="z5Z-06-8L3"/>
+                <outlet property="view" destination="c22-O7-iKe" id="Bq3-0n-Y5S"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView appearanceType="aqua" simulatedAppContext="notificationCenter" translatesAutoresizingMaskIntoConstraints="NO" id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="248"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-YQ-ztw">
+                    <rect key="frame" x="-2" y="230" width="449" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="YEx-vh-S6E"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="7La-3w-Q6P">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="sLR-Lz-4NR">
+                    <rect key="frame" x="-2" y="209" width="40" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="oAo-k7-GVL"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="gi8-Bb-V2U">
+                        <font key="font" metaFont="systemBold"/>
+                        <color key="backgroundColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                    <connections>
+                        <binding destination="-2" name="value" keyPath="self.representedObject" id="8kJ-z2-MuO">
+                            <dictionary key="options">
+                                <string key="NSValueTransformerName">CafeteriaViewLabelTransformer</string>
+                            </dictionary>
+                        </binding>
+                    </connections>
+                </textField>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="edp-tx-Iv5">
+                    <rect key="frame" x="0.0" y="1" width="450" height="188"/>
+                </customView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="2a8-YQ-ztw" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" id="G01-Xz-a7P"/>
+                <constraint firstItem="edp-tx-Iv5" firstAttribute="top" secondItem="sLR-Lz-4NR" secondAttribute="bottom" constant="20" id="HEn-BM-OBB"/>
+                <constraint firstItem="2a8-YQ-ztw" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="5" id="OeS-hR-oPi"/>
+                <constraint firstAttribute="bottom" secondItem="edp-tx-Iv5" secondAttribute="bottom" constant="1" id="SLO-SX-3SJ"/>
+                <constraint firstAttribute="trailing" secondItem="edp-tx-Iv5" secondAttribute="trailing" id="Tgd-PN-09N"/>
+                <constraint firstItem="sLR-Lz-4NR" firstAttribute="leading" secondItem="2a8-YQ-ztw" secondAttribute="leading" id="kjU-3a-k0D"/>
+                <constraint firstAttribute="trailing" secondItem="2a8-YQ-ztw" secondAttribute="trailing" constant="5" id="pEh-gT-10m"/>
+                <constraint firstItem="edp-tx-Iv5" firstAttribute="leading" secondItem="sLR-Lz-4NR" secondAttribute="leading" id="tgl-R0-5vz"/>
+                <constraint firstItem="sLR-Lz-4NR" firstAttribute="top" secondItem="2a8-YQ-ztw" secondAttribute="bottom" constant="4" id="zPa-7K-qv7"/>
+            </constraints>
+            <point key="canvasLocation" x="387" y="294"/>
+        </customView>
+        <userDefaultsController representsSharedInstance="YES" id="YKg-Y3-Ks9"/>
+        <viewController id="cL0-M4-Suo" customClass="NCWidgetListViewController">
+            <connections>
+                <outlet property="delegate" destination="-2" id="X40-5d-huq"/>
+                <outlet property="view" destination="edp-tx-Iv5" id="BB6-cU-2nQ"/>
+            </connections>
+        </viewController>
+    </objects>
+</document>

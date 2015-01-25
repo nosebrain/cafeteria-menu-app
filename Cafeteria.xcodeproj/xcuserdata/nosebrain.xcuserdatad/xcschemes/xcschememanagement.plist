@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>CafeteriaWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>F9BACDBC1A7494D60032BAA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F9BACDD01A7494EF0032BAA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
