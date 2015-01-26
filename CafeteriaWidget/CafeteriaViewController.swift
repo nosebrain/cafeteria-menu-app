@@ -49,20 +49,10 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         var weekOfYear = components.weekOfYear
         let weekday = components.weekday
         
-        var labelText = "Today"
+        
         if (weekday == 1 || weekday == 7) {
             weekOfYear++
         }
-        
-        if (weekday == 1) {
-            labelText = "Tomorrow"
-        }
-        
-        if (weekday == 7) {
-            labelText = "Monday"
-        }
-        
-        self.dayLabel.stringValue = labelText;
         
         if let cafeteria = self.representedObject as? Cafeteria {
             let urlString = NSString(format: "http://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
@@ -84,8 +74,27 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let today = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitWeekday, fromDate: today)
+        let components = calendar.components(.CalendarUnitWeekday | .CalendarUnitHour, fromDate: today)
         var weekday = components.weekday
+        let hour = components.hour
+        
+        var labelText = "Today"
+        // weekday = Sunday => we will show Monday
+        if (weekday == 1) {
+            labelText = "Tomorrow"
+        }
+        
+        if (weekday == 7) {
+            labelText = "Monday"
+        }
+        
+        // if all cafeterias are closed show the menu for tomorrow
+        if (hour > 16) {
+            weekday++;
+            labelText = "Tomorrow"
+        }
+        
+        self.dayLabel.stringValue = labelText;
         
         weekday -= 2 // 0 = monday, …
         
