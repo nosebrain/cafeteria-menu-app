@@ -22,12 +22,14 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         caf.university = "Universität Würzburg"
         caf.universityId = "uni-wue"
         caf.id = 1
+        caf.url = NSURL(string: "http://www.studentenwerk-wuerzburg.de/essen-trinken/speiseplaene/plan/show/frankenstube-wuerzburg.html")
         caf.name = "Frankenstube"
         
         let caf2 = Cafeteria()
         caf2.university = "Universität Würzburg"
         caf2.universityId = "uni-wue"
         caf2.id = 2
+        caf2.url = NSURL(string: "http://www.studentenwerk-wuerzburg.de/essen-trinken/speiseplaene/plan/show/mensa-am-hubland-wuerzburg.html")
         caf2.name = "Mensa am Hubland"
         
         self.arrayController = NSArrayController(content: NSArray(array: [caf, caf2] ))

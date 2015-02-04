@@ -26,6 +26,8 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         
         self.arrayController = NSArrayController(content: NSArray())
         self.listViewController.contents = self.arrayController.arrangedObjects as [AnyObject]
+        
+        
     }
     
     override var nibName: String? {
@@ -35,6 +37,10 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     func widgetMarginInsetsForProposedMarginInsets(defaultMarginInset: NSEdgeInsets) -> NSEdgeInsets {
         // Override the left margin so that the list view is flush with the edge.
         return NSEdgeInsets(top: 10, left: -100, bottom: 10, right: 0);
+    }
+    
+    @IBAction func openCafeteriaPage(sender: AnyObject) {
+        NSWorkspace.sharedWorkspace().openURL(self.getCafeteria().url!)
     }
     
     func widgetList(list: NCWidgetListViewController!, viewControllerForRow row: Int) -> NSViewController! {
@@ -54,22 +60,23 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
             weekOfYear++
         }
         
-        if let cafeteria = self.representedObject as? Cafeteria {
-            let urlString = NSString(format: "http://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
-            
-            println(urlString)
-            
-            let url = NSURL(string: urlString)
-            
-            let req = NSURLRequest(URL: url!)
-            
-            self.data = NSMutableData()
-            
-            let connection = NSURLConnection(request: req, delegate: self, startImmediately: true)
-        }
+        let cafeteria = self.getCafeteria();
+        let urlString = NSString(format: "http://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
+        
+        println(urlString)
+        
+        let url = NSURL(string: urlString)
+        
+        let req = NSURLRequest(URL: url!)
+        
+        self.data = NSMutableData()
+        
+        let connection = NSURLConnection(request: req, delegate: self, startImmediately: true)
     }
     
-
+    func getCafeteria() -> Cafeteria {
+        return self.representedObject as Cafeteria
+    }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let today = NSDate()

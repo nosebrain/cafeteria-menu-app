@@ -12,6 +12,7 @@ class Cafeteria : NSObject {
     
     var name : String?
     var university : String?
+    var url : NSURL?
     
     var universityId : String?
     var id : Int?
