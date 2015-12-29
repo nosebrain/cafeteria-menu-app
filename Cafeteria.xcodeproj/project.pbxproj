@@ -28,6 +28,8 @@
 		F9BACDE81A7495270032BAA5 /* Cafeteria.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDE71A7495270032BAA5 /* Cafeteria.swift */; };
 		F9BACDEA1A74959B0032BAA5 /* CafeteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9BACDE91A74959B0032BAA5 /* CafeteriaViewController.swift */; };
 		F9BACDEC1A7514A60032BAA5 /* CafeteriaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */; };
+		F9E1FF0B1BAE0168003351DF /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E1FF0A1BAE0168003351DF /* InfoViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F9E1FF0F1BAE01FE003351DF /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E1FF0E1BAE01FE003351DF /* InfoViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,8 @@
 		F9BACDE71A7495270032BAA5 /* Cafeteria.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cafeteria.swift; sourceTree = "<group>"; };
 		F9BACDE91A74959B0032BAA5 /* CafeteriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CafeteriaViewController.swift; sourceTree = "<group>"; };
 		F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CafeteriaViewController.xib; sourceTree = "<group>"; };
+		F9E1FF0A1BAE0168003351DF /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		F9E1FF0E1BAE01FE003351DF /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,10 +212,12 @@
 				F9BACDEB1A7514A60032BAA5 /* CafeteriaViewController.xib */,
 				F955CCA71A753EA7005E0926 /* FoodViewController.swift */,
 				F955CCAF1A754097005E0926 /* FoodViewController.xib */,
+				F9E1FF0E1BAE01FE003351DF /* InfoViewController.xib */,
 				F9BACDD61A7494EF0032BAA5 /* Supporting Files */,
 				F9BACDDC1A7494EF0032BAA5 /* TodayViewController.swift */,
 				F9BACDDE1A7494EF0032BAA5 /* TodayViewController.xib */,
 				F955CCA41A753B30005E0926 /* Transformer */,
+				F9E1FF0A1BAE0168003351DF /* InfoViewController.swift */,
 			);
 			path = CafeteriaWidget;
 			sourceTree = "<group>";
@@ -289,6 +295,8 @@
 		F9BACDA31A7494D60032BAA5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = nosebrain;
 				TargetAttributes = {
@@ -348,6 +356,7 @@
 				F9BACDEC1A7514A60032BAA5 /* CafeteriaViewController.xib in Resources */,
 				F9BACDDF1A7494EF0032BAA5 /* TodayViewController.xib in Resources */,
 				F955CCB01A754097005E0926 /* FoodViewController.xib in Resources */,
+				F9E1FF0F1BAE01FE003351DF /* InfoViewController.xib in Resources */,
 				F9BACDDB1A7494EF0032BAA5 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +394,7 @@
 				F9BACDEA1A74959B0032BAA5 /* CafeteriaViewController.swift in Sources */,
 				F9BACDE81A7495270032BAA5 /* Cafeteria.swift in Sources */,
 				F9BACDDD1A7494EF0032BAA5 /* TodayViewController.swift in Sources */,
+				F9E1FF0B1BAE0168003351DF /* InfoViewController.swift in Sources */,
 				F955CCAD1A753FFD005E0926 /* Food.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

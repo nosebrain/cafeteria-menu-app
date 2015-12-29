@@ -25,9 +25,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         super.viewDidLoad()
         
         self.arrayController = NSArrayController(content: NSArray())
-        self.listViewController.contents = self.arrayController.arrangedObjects as [AnyObject]
-        
-        
+        self.listViewController.contents = self.arrayController.arrangedObjects as! [AnyObject]
     }
     
     override var nibName: String? {
@@ -44,13 +42,16 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     }
     
     func widgetList(list: NCWidgetListViewController!, viewControllerForRow row: Int) -> NSViewController! {
+        if (self.getCafeteria().closed) {
+            return InfoViewController();
+        }
         return FoodViewController();
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
         let today = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitWeekday | .CalendarUnitYear | .CalendarUnitWeekOfYear, fromDate: today)
+        let components = calendar.components([.Weekday, .Year, .WeekOfYear], fromDate: today)
         let year = components.year
         var weekOfYear = components.weekOfYear
         let weekday = components.weekday
@@ -61,47 +62,30 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         }
         
         let cafeteria = self.getCafeteria();
-        let urlString = NSString(format: "http://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
+        let urlString = String(format: "https://nosebrain.myqnapcloud.com/service/%@/%d/%d_%d.json", cafeteria.universityId!, cafeteria.id!, year, weekOfYear)
         
-        println(urlString)
+        print(urlString)
         
-        let url = NSURL(string: urlString)
+        let url = NSURL(string: urlString as String)
         
         let req = NSURLRequest(URL: url!)
         
         self.data = NSMutableData()
         
+        // make the request
         let connection = NSURLConnection(request: req, delegate: self, startImmediately: true)
     }
     
     func getCafeteria() -> Cafeteria {
-        return self.representedObject as Cafeteria
+        return self.representedObject as! Cafeteria
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
         let today = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components(.CalendarUnitWeekday | .CalendarUnitHour, fromDate: today)
+        let components = calendar.components([.Weekday, .Hour], fromDate: today)
         var weekday = components.weekday
         let hour = components.hour
-        
-        var labelText = "Today"
-        // weekday = Sunday => we will show Monday
-        if (weekday == 1) {
-            labelText = "Tomorrow"
-        }
-        
-        if (weekday == 7) {
-            labelText = "Monday"
-        }
-        
-        // if all cafeterias are closed show the menu for tomorrow
-        if (hour > 16) {
-            weekday++;
-            labelText = "Tomorrow"
-        }
-        
-        self.dayLabel.stringValue = labelText;
         
         weekday -= 2 // 0 = monday, …
         
@@ -109,36 +93,71 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
             weekday = 0;
         }
         
-        println("loaded")
+        let cafeteria = self.getCafeteria()
+        cafeteria.closed = false;
         
         // TODO: update view
-        
-        var parseError: NSError?
-        let info: AnyObject? = NSJSONSerialization.JSONObjectWithData(self.data!,
-            options: NSJSONReadingOptions.AllowFragments,
-            error:&parseError)
-        
-        let foods = NSMutableArray()
-        
-        // FIXME: handle error
-        if let cafeteria = info as? NSDictionary {
-            if let days = cafeteria["days"] as? NSArray {
-                if let day = days[weekday] as? NSDictionary {
-                    if let food = day["food"] as? NSArray {
-                        for menuD in food {
-                            if let menu = menuD as?  NSDictionary{
-                                let foodO = Food();
-                                foodO.desc = menu["description"] as? NSString
-                                foods.addObject(foodO);
+        do {
+            let info = try NSJSONSerialization.JSONObjectWithData(self.data!, options: NSJSONReadingOptions.AllowFragments)
+            let foods = NSMutableArray()
+            
+            if let jsonCafeteria = info as? NSDictionary {
+                if let closed = jsonCafeteria["closed"] as? Bool {
+                    if (closed) {
+                        cafeteria.closed = true
+                        self.arrayController = NSArrayController()
+                        self.listViewController.contents = self.arrayController.arrangedObjects as! [AnyObject]
+                    }
+                } else {
+                    if let days = jsonCafeteria["days"] as? NSArray {
+                        if let day = days[weekday] as? NSDictionary {
+                            
+                            if let holidayJson = day["holiday"] as? Bool {
+                                if (holidayJson) {
+                                    cafeteria.closed = true
+                                }
+                            }
+                            
+                            if let food = day["food"] as? NSArray {
+                                for menuD in food {
+                                    if let menu = menuD as?  NSDictionary{
+                                        let foodO = Food();
+                                        foodO.desc = menu["description"] as? String
+                                        foods.addObject(foodO);
+                                    }
+                                }
                             }
                         }
                     }
+                    self.arrayController = NSArrayController(content: foods)
+                    self.listViewController.contents = self.arrayController.arrangedObjects as! [AnyObject]
                 }
+            }
+        } catch let error as NSError {
+            // FIXME: handle error
+        }
+        
+        var labelText = "Closed"
+        
+        if (!cafeteria.closed) {
+            labelText = "Today"
+            // weekday = Sunday => we will show Monday
+            if (weekday == 1) {
+                labelText = "Tomorrow"
+            }
+            
+            if (weekday == 7) {
+                labelText = "Monday"
+            }
+            
+            // if cafeteria is closed show the menu for tomorrow
+            if (hour > 16 && weekday != 7) {
+                weekday++;
+                labelText = "Tomorrow"
             }
         }
         
-        self.arrayController = NSArrayController(content: foods)
-        self.listViewController.contents = self.arrayController.arrangedObjects as [AnyObject]
+        self.dayLabel.stringValue = labelText;
     }
     
     func connection(connection: NSURLConnection!, didReceiveData conData: NSData!) {

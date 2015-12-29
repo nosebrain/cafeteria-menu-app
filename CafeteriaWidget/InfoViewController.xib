@@ -19,14 +19,10 @@
                     <constraints>
                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="lAW-3a-hcP"/>
                     </constraints>
-                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" id="hTP-vZ-iPr">
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Closed" id="hTP-vZ-iPr">
                         <font key="font" metaFont="system"/>
-                        <string key="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim venia</string>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
-                    <connections>
-                        <binding destination="-2" name="value" keyPath="self.representedObject.desc" id="3NV-Xb-GoX"/>
-                    </connections>
                 </textField>
             </subviews>
             <constraints>

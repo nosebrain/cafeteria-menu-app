@@ -18,4 +18,6 @@ class Cafeteria : NSObject {
     var id : Int?
     
     var days : NSArray?
+    
+    var closed : Bool = false
 }

@@ -32,8 +32,15 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         caf2.url = NSURL(string: "http://www.studentenwerk-wuerzburg.de/essen-trinken/speiseplaene/plan/show/mensa-am-hubland-wuerzburg.html")
         caf2.name = "Mensa am Hubland"
         
-        self.arrayController = NSArrayController(content: NSArray(array: [caf, caf2] ))
-        self.listViewController.contents = self.arrayController.arrangedObjects as [AnyObject]
+        let caf3 = Cafeteria()
+        caf3.university = "Universität Würzburg"
+        caf3.universityId = "uni-wue"
+        caf3.id = 6
+        caf3.url = NSURL(string: "http://www.studentenwerk-wuerzburg.de/essen-trinken/speiseplaene/plan/show/mensateria-campus-nord.html")
+        caf3.name = "Mensateria Campus Nord"
+        
+        self.arrayController = NSArrayController(content: NSArray(array: [caf, caf2, caf3] ))
+        self.listViewController.contents = self.arrayController.arrangedObjects as! [AnyObject]
     }
     
     override var nibName: String? {

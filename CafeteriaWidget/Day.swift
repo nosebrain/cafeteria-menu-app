@@ -8,8 +8,8 @@
 
 import Foundation
 
-class Food : NSObject {
+class Day : NSObject {
     
-    var desc : String?
-    var prices : NSArray?
+    var foods : NSArray?
+    var holiday : Bool?
 }
