@@ -74,6 +74,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
         
         // make the request
         let connection = NSURLConnection(request: req, delegate: self, startImmediately: true)
+        self.dayLabel.stringValue = "loading …"
     }
     
     func getCafeteria() -> Cafeteria {
@@ -81,6 +82,7 @@ class CafeteriaViewController : NSViewController, NCWidgetListViewDelegate {
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection!) {
+        self.dayLabel.stringValue = ""
         let today = NSDate()
         let calendar = NSCalendar.currentCalendar()
         let components = calendar.components([.Weekday, .Hour], fromDate: today)
