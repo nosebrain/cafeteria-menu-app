@@ -39,7 +39,7 @@ class TodayViewController: NSViewController, NCWidgetProviding, NCWidgetListView
         caf3.url = NSURL(string: "http://www.studentenwerk-wuerzburg.de/essen-trinken/speiseplaene/plan/show/mensateria-campus-nord.html")
         caf3.name = "Mensateria Campus Nord"
         
-        self.arrayController = NSArrayController(content: NSArray(array: [caf, caf2, caf3] ))
+        self.arrayController = NSArrayController(content: NSArray(array: [caf2, caf3] ))
         self.listViewController.contents = self.arrayController.arrangedObjects as! [AnyObject]
     }
     
